@@ -51,22 +51,22 @@
 
 <details><summary>4-2 SQLインジェクション</summary>
 
-**対策例1（p.XX）:**
+**対策例1（p.158）:**
 ```python
         data['users'] = User.objects.filter(name=name, password=password).order_by('id')
 ```
-**対策例2（p.XX）:**
+**対策例2（p.160）:**
 ```python
         data['users'] = User.objects.filter(name=name).filter(password=password).order_by('id')
 ```
-**対策例3（p.XX）:**
+**対策例3（p.161）:**
 ```python
         conditions = {
             'name': name, 'password': password
         }
         data['users'] = User.objects.filter(**conditions).order_by('id')
 ```
-**対策例4（p.XX）:**
+**対策例4（p.162）:**
 ```python
 from django.db.models import Q #Qオブジェクトを使うためにインポート
         data['users'] = User.objects.filter( Q(name=name) & Q(password=password) ).order_by('id')
@@ -75,7 +75,7 @@ from django.db.models import Q #Qオブジェクトを使うためにインポ�
 
 <details><summary>4-4 セカンドオーダーSQLインジェクション</summary>
 
-**対策例（p.XX）:**
+**対策例（p.189）:**
 ```python
         user = User.objects.filter(name=name).first()
 
@@ -86,24 +86,24 @@ from django.db.models import Q #Qオブジェクトを使うためにインポ�
 
 <details><summary>5-3 XSS</summary>
 
-**対策例1（p.XX）:**
+**対策例1（p.228）:**
 ```python
 from django.utils.html import escape #escape()関数を使うためにインポート
             data['msg'] = escape(input_str)
 ```
-**対策例2（p.XX）:**
+**対策例2（p.229）:**
 ```html
     {% comment %} {% autoescape off %} {% endcomment %}
     <p>{{ msg }}</p><br/>
     {% comment %} {% endautoescape %} {% endcomment %}
 ```
-**対策例3（p.XX）:**
+**対策例3（p.229）:**
 ```html
     {% autoescape on %}
     <p>{{ msg }}</p><br/>
     {% endautoescape %}
 ```
-**対策例4（p.XX）:**
+**対策例4（p.230-231）:**
 ```bash
 pip install bleach
 ```
@@ -144,7 +144,7 @@ bleach # 追加
 
 <details><summary>6-1 OSコマンドインジェクション</summary>
 
-**対策例1（p.XX）:**
+**対策例1（p.262）:**
 ```python
         cmd = ['echo', f'Hello, {command}']
         result = subprocess.run(cmd, shell=False, capture_output=True, text=True)
@@ -154,7 +154,7 @@ bleach # 追加
         else:
             data['errmsg'] = _('msg.echo.command.failure') # result.stderrは削除
 ```
-**対策例2（p.XX）:**
+**対策例2（p.263）:**
 ```python
         command = shlex.quote(command) # shlex.quote()を使用したサニタイズを追加
 ```
@@ -162,12 +162,12 @@ bleach # 追加
 
 <details><summary>6-4 コードインジェクション</summary>
 
-**対策例（p.XX）:**
+**対策例（p.291）:**
 ```python
 import ast #追加
                 data['value'] = str(ast.literal_eval(expression)) #変更
 ```
-**対策例(四則演算実装付き)（p.XX）:**
+**対策例(四則演算実装付き):**
 ```python
 import ast
 import operator
@@ -243,7 +243,7 @@ def _642_code_injection(request):
 
 <details><summary>7-1 CSRF</summary>
 
-**対策例（p.XX）:**
+**対策例（p.323）:**
 ```python
 # @csrf_exempt を削除 (同ドメインのため、CSRFトークンは使用しない)
 def _712_csrf(request):
@@ -252,7 +252,7 @@ def _712_csrf(request):
 
 <details><summary>8-1 パストラバーサル</summary>
 
-**対策例（p.XX）:**
+**対策例（p.374）:**
 ```python
     if filename:
         # 許可されたファイル名のみを許可
