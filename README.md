@@ -1,4 +1,4 @@
-# Pythonで学ぶ安全・安心なアプリの作り方[![License](http://img.shields.io/badge/license-MIT-blue.svg?style=flat)](https://github.com/anoyoroshi/dsclab/blob/main/LICENSE) [![GitHub release](https://img.shields.io/github/v/release/anoyoroshi/dsclab)](https://github.com/anoyoroshi/dsclab/releases/latest)
+# Pythonで学ぶWebアプリのセキュアコーディング[![License](http://img.shields.io/badge/license-MIT-blue.svg?style=flat)](https://github.com/anoyoroshi/dsclab/blob/main/LICENSE) [![GitHub release](https://img.shields.io/github/v/release/anoyoroshi/dsclab)](https://github.com/anoyoroshi/dsclab/releases/latest)
 # DSCLab（Django5 Secure-Coding Laboratory）
 
 <img src="static/dsclab.png" width="50%">
