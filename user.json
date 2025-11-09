@@ -1,0 +1,123 @@
+[
+{
+    "model": "dsclab.user",
+    "pk": 1,
+    "fields": {
+        "name": "admin",
+        "password": "password",
+        "secret": "1000",
+        "phone": "",
+        "mail": "admin@gmail.com"
+    }
+},
+{
+    "model": "dsclab.user",
+    "pk": 2,
+    "fields": {
+        "name": "admin02",
+        "password": "passw2rd",
+        "secret": "2000",
+        "phone": "",
+        "mail": "admin02@gmail.com"
+    }
+},
+{
+    "model": "dsclab.user",
+    "pk": 3,
+    "fields": {
+        "name": "admin03",
+        "password": "pass3ord",
+        "secret": "3000",
+        "phone": "",
+        "mail": "admin03@gmail.com"
+    }
+},
+{
+    "model": "dsclab.user",
+    "pk": 4,
+    "fields": {
+        "name": "Davis",
+        "password": "password",
+        "secret": "0000",
+        "phone": "",
+        "mail": "Davis@gmail.com"
+    }
+},
+{
+    "model": "dsclab.user",
+    "pk": 5,
+    "fields": {
+        "name": "Black",
+        "password": "pas2word",
+        "secret": "1111",
+        "phone": "",
+        "mail": "Black@gmail.com"
+    }
+},
+{
+    "model": "dsclab.user",
+    "pk": 6,
+    "fields": {
+        "name": "Alice",
+        "password": "pa3sword",
+        "secret": "2222",
+        "phone": "",
+        "mail": "Alice@gmail.com"
+    }
+},
+{
+    "model": "dsclab.user",
+    "pk": 7,
+    "fields": {
+        "name": "Bob",
+        "password": "p4ssword",
+        "secret": "3333",
+        "phone": "",
+        "mail": "Bob@gmail.com"
+    }
+},
+{
+    "model": "dsclab.user",
+    "pk": 8,
+    "fields": {
+        "name": "Taro",
+        "password": "passwor5",
+        "secret": "4444",
+        "phone": "",
+        "mail": "Taro@gmail.com"
+    }
+},
+{
+    "model": "dsclab.user",
+    "pk": 9,
+    "fields": {
+        "name": "Eric",
+        "password": "pas9w0rd",
+        "secret": "5555",
+        "phone": "",
+        "mail": "Eric@gmail.com"
+    }
+},
+{
+    "model": "dsclab.user",
+    "pk": 10,
+    "fields": {
+        "name": "Taka",
+        "password": "pathworld",
+        "secret": "6666",
+        "phone": "",
+        "mail": "Taka@gmail.com"
+    }
+},
+{
+    "model": "dsclab.user",
+    "pk": 11,
+    "fields": {
+        "name": "Shohei",
+        "password": "pathosrd",
+        "secret": "7777",
+        "phone": "",
+        "mail": "Shohei@gmail.com"
+    }
+}
+]

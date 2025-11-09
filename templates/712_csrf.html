@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% block body %}
+{% include "header.html" %}
+<h2>{% trans 'title.csrf.page' %}</h2>
+<p>{% trans 'msg.enter.recover.systemerror' %}</p>
+
+{% if complete %}
+    <p>{% trans 'msg.your.password.has.been.changed.to.cracked' %}</p> 
+    <a href="/admins/main">{% trans 'label.goto.admin.page' %}</a><br/><br/>
+{% endif %}
+<form method="post" action="."> 
+    <input type="hidden" name="username" value="{{ request.user.username }}"> 
+    <input type="submit" value="Click me!">
+    {% include "messages.html" %}
+</form>
+{% endblock %}

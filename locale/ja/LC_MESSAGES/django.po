@@ -1,0 +1,380 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-06-01 17:36+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: templates/header.html:3
+msgid "label.top"
+msgstr "トップ"
+
+#: dsclab/views.py:83
+msgid "title.adminmain.page"
+msgstr "管理者向けメインページ"
+
+#: dsclab/views.py:100
+msgid "title.login.page"
+msgstr "管理者ログインページ"
+
+#: dsclab/views.py:109,124
+msgid "msg.authentication.fail"
+msgstr "認証に失敗しました。再度ログインして下さい。"
+
+#: dsclab/views.py:135
+msgid "title.dbuserlist.page"
+msgstr "ユーザ一覧"
+
+#: dsclab/views.py:136
+msgid "msg.note.dbuserlist"
+msgstr ""
+"データベースに登録されているユーザ情報を一覧表示します。デバッグやデータ確認にご利用ください。"
+
+#: dsclab/views.py:153
+msgid "title.sqlijc.page"
+msgstr "暗証番号検索"
+
+#: dsclab/views.py:154
+msgid "msg.note.sqlijc"
+msgstr ""
+"<code>Davis</code>と<code>password</code>を入力すると、暗証番号が表示されま"
+"す。パスワードに<code>' OR '1'='1</code>を入力すると、他のユーザの情報が表"
+"示できます。"
+
+#: dsclab/views.py:167
+msgid "title.secondordersqlijc.page"
+msgstr "新規ユーザ登録"
+
+#: dsclab/views.py:168
+msgid "msg.note.secondordersqlijc"
+msgstr ""
+"名前に<code>' OR '1'='1</code>を入力し、パスワードと暗証番号を入力してユーザを登録"
+"すると、adminさんのパスワードと秘密の質問が表示されます。"
+
+#: dsclab/views.py:202
+msgid "title.xss.page"
+msgstr "文字列の表示"
+
+#: dsclab/views.py:203
+msgid "msg.enter.string"
+msgstr "文字列を入力して下さい。"
+
+#: dsclab/views.py:215
+msgid "title.commandinjection.page"
+msgstr "テキスト入力画面"
+
+#: dsclab/views.py:216
+msgid "msg.note.commandinjection"
+msgstr ""
+"<code>;hostname</code>を入力すると、コンピュータ名"
+"が表示されます。"
+
+#: dsclab/views.py:223
+msgid "msg.echo.command.success"
+msgstr "echoコマンドは成功しました。"
+
+#: dsclab/views.py:226
+msgid "msg.echo.command.failure"
+msgstr "echoコマンドは何らかの理由により失敗しました。"
+
+#: dsclab/views.py:234
+msgid "title.codeinjection.page"
+msgstr "数値処理の実行"
+
+#: dsclab/views.py:235
+msgid "msg.note.codeinjection"
+msgstr ""
+"<code>__import__('os')._exit(0)</code>を入力すると、このアプリケーションが"
+"コードインジェクションで強制終了します。"
+
+#: dsclab/views.py:246
+msgid "msg.invalid.expression"
+msgstr "不正な数式です : %(exception)s"
+
+#: dsclab/views.py:258 templates/adminmain.html:8 templates/712_csrf.html:5
+msgid "title.csrf.page"
+msgstr "パスワード変更"
+
+#: dsclab/views.py:259
+msgid "msg.note.csrf"
+msgstr ""
+"このページは、ユーザが意図しないリクエストも受信して、パスワードを変更して"
+"しまいます。"
+
+#: dsclab/views.py:286
+msgid "msg.passwd.change.failed"
+msgstr "パスワードの変更に失敗しました。"
+
+#: dsclab/views.py:293
+msgid "title.pathtraversal.page"
+msgstr "ファイルコンテンツ表示"
+
+#: dsclab/views.py:294
+msgid "msg.note.pathtraversal"
+msgstr ""
+"<code>812_path_traversal.html</code>と入力すると、このページのHTMLが表示されます。"
+" <code>../dsclab/settings.py</code>と入力すると、Djangoの設定ファイルが表示される可能性があります。"
+
+#: dsclab/views.py:316
+msgid "title.xxe.page"
+msgstr "XMLファイルの取り込み"
+
+#: dsclab/views.py:317
+msgid "msg.note.xxe"
+msgstr ""
+"但し、Djangoのセキュリティ機能により、XXE攻撃を試みるとエラーになります。"
+
+#: dsclab/views.py:333
+msgid "msg.not.xml.file"
+msgstr "XMLファイルではありません。"
+
+#: templates/adminmain.html:5
+msgid "msg.admin.page.top"
+msgstr "管理者ページへようこそ！！"
+
+#: templates/adminmain.html:7
+msgid "Django administration"
+msgstr ""
+
+#: templates/login.html:5
+msgid "msg.need.admin.privilege"
+msgstr ""
+"ここから先は管理者権限が必要です。ユーザIDとパスワードを入力して下さい。"
+
+#: templates/login.html:19
+msgid "label.login"
+msgstr "ログイン"
+
+#: templates/db_userlist.html:7 templates/login.html:10
+msgid "label.user.id"
+msgstr "ユーザID"
+
+#: templates/login.html:14 templates/422_sql_injection.html:12
+#: templates/442_second_order_sql_injection.html:14
+msgid "label.password"
+msgstr "パスワード"
+
+#: templates/db_userlist.html:8 templates/422_sql_injection.html:9
+#: templates/442_second_order_sql_injection.html.html:10
+msgid "label.name"
+msgstr "名前"
+
+#: templates/db_userlist.html:9
+#: templates/442_second_order_sql_injection.html:22
+msgid "label.phone"
+msgstr "電話番号"
+
+#: templates/db_userlist.html:10
+#: templates/442_second_order_sql_injection.html:26
+msgid "label.mail"
+msgstr "メールアドレス"
+
+#: templates/422_sql_injection.html:16
+#: templates/442_second_order_sql_injection.html:30
+#: templates/532_xss.html:10 templates/612_os_command_injection.html:8
+msgid "label.submit"
+msgstr "送信"
+
+#: templates/442_second_order_sql_injection.html:6
+msgid "msg.register_user_description"
+msgstr "名前とパスワード及び暗証番号を入力すると、ユーザが新規登録されます。"
+
+#: templates/422_sql_injection.html:7
+msgid "msg.enter.name.and.passwd"
+msgstr "名前とパスワードを入力すると、暗証番号が表示されます。"
+
+#: templates/422_sql_injection.html:26 templates/442_second_order_sql_injection.html:18
+msgid "label.secret"
+msgstr "暗証番号"
+
+#: templates/422_sql_injection.html:6
+msgid "msg.description.sqlijc"
+msgstr "名前とパスワードを入力すると、暗証番号が表示されます。"
+
+#: templates/442_second_order_sql_injection.html:6
+msgid "msg.description.secondordersqlijc"
+msgstr "名前とパスワード及び暗証番号を入力すると、ユーザが新規登録されます。"
+
+#: templates/442_second_order_sql_injection.html:12,16,20
+msgid "placeholder.required"
+msgstr "必須"
+
+#: templates/532_xss.html:7
+msgid "msg.description.xss"
+msgstr "文字列を入力すると、文字列がそのまま表示されます。"
+
+#: templates/532_xss.html:8
+msgid "label.string"
+msgstr "文字列"
+
+#: templates/532_xss.html:16
+msgid "msg.note.xss"
+msgstr ""
+"名前に<code>&lt;script&gt;alert(document.cookie);&lt;/script&gt;</code>を入力すると、"
+"JavaScriptが実行されます。"
+
+#: templates/612_os_command_injection.html:7
+msgid "msg.enter.echo.command"
+msgstr ""
+"何らかのテキストを入力して送信すると、 echo コマンドによって"
+"入力されたテキストがそのまま表示されます。"
+
+#: templates/642_code_injection.html:7
+msgid "msg.enter.math.expression"
+msgstr ""
+"数式を入力して下さい。数式には<code>math</code>を使用することができます。"
+"例)<code>math.pow(math.sqrt(16), 2)</code>"
+
+#: templates/642_code_injection.html:13
+msgid "label.calculate"
+msgstr "計算する"
+
+#: templates/712_csrf.html:6
+msgid "msg.enter.recover.systemerror"
+msgstr ""
+"システムエラーが発生しました。復旧するには、以下のボタンをクリックしてください。"
+
+#: templates/712_csrf.html:10
+msgid "label.goto.admin.page"
+msgstr "管理者メインページへ"
+
+#: templates/812_path_traversal.html:6
+msgid "msg.description.pathtraversal"
+msgstr "HTMLファイル名を入力してください:"
+
+#: templates/812_path_traversal.html:9
+msgid "label.show_filename"
+msgstr "ファイル名表示"
+
+#: templates/822_xxe.html:8
+msgid "label.result"
+msgstr "結果"
+
+#: templates/822_xxe.html:16
+msgid "label.history.back"
+msgstr "戻る"
+
+#: templates/822_xxe.html:18
+msgid "msg.update.users.by.xml"
+msgstr ""
+"templateフォルダにある以下のファイルをアップロードし、XMLファイルを取り込みます。"
+
+#: templates/822_xxe.html:19
+msgid "msg.xml.file.sample.normal"
+msgstr ""
+" - 822_XXE_Sample1_Normal.xml ：データベースを更新します（正常系）。"
+
+#: templates/822_xxe.html:20
+msgid "msg.xml.file.sample.attack"
+msgstr ""
+" - 822_XXE_Sample2_Attack.xml ：Linuxサーバのパスワードファイル(/etc/passwd)の表示を試みます（XXE攻撃）。"
+
+#: templates/822_xxe.html:24
+msgid "msg.select.upload.file"
+msgstr "アップロードするファイルを選択して下さい。"
+
+#: templates/822_xxe.html:25
+msgid "label.upload"
+msgstr "アップロード"
+
+#: templates/header.html:15
+msgid "label.login.user.id"
+msgstr "ログインユーザID"
+
+#: templates/header.html:16
+msgid "label.logout"
+msgstr "ログアウト"
+
+#: templates/index.html:18
+msgid "section.vulnerabilities"
+msgstr "脆弱性"
+
+#: templates/index.html:22
+msgid "function.name.sql.injection"
+msgstr "SQLインジェクション"
+
+#: templates/index.html:23
+msgid "function.description.sql.injection"
+msgstr "このページにはSQLインジェクションの脆弱性があります。"
+
+#: templates/index.html:26
+msgid "function.name.secondorderijc"
+msgstr "セカンドオーダーSQLインジェクション"
+
+#: templates/index.html:27
+msgid "function.description.secondorderijc"
+msgstr "このページにはセカンドオーダーSQLインジェクションの脆弱性があります。"
+
+#: templates/index.html:30
+msgid "function.name.xss"
+msgstr "XSS (クロスサイトスクリプティング)"
+
+#: templates/index.html:31
+msgid "function.description.xss"
+msgstr "このページにはXSSの脆弱性があります。"
+
+#: templates/index.html:34
+msgid "function.name.os.command.injection"
+msgstr "OSコマンドインジェクション"
+
+#: templates/index.html:35
+msgid "function.description.os.command.injection"
+msgstr "このページにはOSコマンドインジェクションの脆弱性があります。"
+
+#: templates/index.html:38
+msgid "function.name.code.injection"
+msgstr "コードインジェクション"
+
+#: templates/index.html:39
+msgid "function.description.code.injection"
+msgstr "このページにはコードインジェクションの脆弱性があります。"
+
+#: templates/index.html:42
+msgid "function.name.csrf"
+msgstr "CSRF (クロスサイトリクエストフォージェリ)"
+
+#: templates/index.html:43
+msgid "function.description.csrf"
+msgstr "パスワード変更ページにはCSRFの脆弱性があります。"
+
+#: templates/index.html:46
+msgid "function.name.pathtraversal"
+msgstr "パストラバーサル"
+
+#: templates/index.html:47
+msgid "function.description.pathtraversal"
+msgstr "ファイルコンテンツ表示ページにはパストラバーサルの脆弱性があります。"
+
+#: templates/index.html:50
+msgid "function.name.xxe"
+msgstr "XXE (XML外部エンティティ)"
+
+#: templates/index.html:51
+msgid "function.description.xxe"
+msgstr "このページにはXXEの脆弱性があります。"
+
+#: templates/index.html:58
+msgid "section.debug"
+msgstr "デバッグ"
+
+#: templates/index.html:62
+msgid "function.name.database.user.list"
+msgstr "ユーザ一覧表示"
+
+#: templates/index.html:63
+msgid "function.description.database.user.list"
+msgstr ""
+"データベースに登録されているユーザ情報を一覧表示します。"

@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% block body %}
+{% include "header.html" %}
+{% trans 'msg.admin.page.top' %}<br><br>
+<ul>
+    <li><a href="/admin/">{% trans 'Django administration' %}</a></li>
+    <li><a href="/admins/csrf">{% trans 'title.csrf.page' %}</a></li>
+</ul>
+{% endblock %}

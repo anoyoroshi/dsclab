@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% block body %}
+{% include "header.html" %}
+<form action="" method="post">
+  {% csrf_token %}
+  <p>{% trans 'msg.description.sqlijc' %}</p>
+  <div class="mb-2">
+    <label for="exampleFormControlInput1" class="form-label">{% trans 'label.name' %}</label>
+    <input type="text" class="form-control" name="name" id="name" style="width: 400px;">
+  </div>
+  <div class="mb-4">
+    <label for="exampleFormControlTextarea1" class="form-label">{% trans 'label.password' %}</label>
+    <input type="password" class="form-control" name="password" id="password" maxlength="20" autocomplete="off" style="width: 400px;">
+  </div>
+  <div class="mb-3">
+    <button type="submit" class="btn btn-light">{% trans 'label.submit' %}</button>
+  </div>
+  {% if message %}
+    <b>{{ message }}</b><br />
+  {% endif %}
+  {% if users %}
+  <table class="table table-striped table-bordered table-hover" style="font-size: small;">
+    <thead>
+      <tr>
+        <th>{% trans 'label.name' %}</th>
+        <th>{% trans 'label.secret' %}</th>
+      </tr>
+    </thead>
+    <tbody>
+    {% for user in users %}
+      <tr>
+        <td>{{ user.name }}</td>
+        <td>{{ user.secret }}</td>
+      </tr>
+    {% endfor %}
+    </tbody>
+  </table>
+  {% endif %}
+  {% include "messages.html" %}
+</form>
+{% endblock %}

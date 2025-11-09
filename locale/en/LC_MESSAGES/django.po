@@ -1,0 +1,380 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-06-01 17:36+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: templates/header.html:3
+msgid "label.top"
+msgstr "TOP"
+
+#: dsclab/views.py:83
+msgid "title.adminmain.page"
+msgstr "Main Page for Administrators"
+
+#: dsclab/views.py:100
+msgid "title.login.page"
+msgstr "Login Page for Administrators"
+
+#: dsclab/views.py:109,124
+msgid "msg.authentication.fail"
+msgstr "Authentication failed. Please login again."
+
+#: dsclab/views.py:135
+msgid "title.dbuserlist.page"
+msgstr "User List"
+
+#: dsclab/views.py:136
+msgid "msg.note.dbuserlist"
+msgstr ""
+"Displays a list of user information registered in the database. Use it for debugging and data verification."
+
+#: dsclab/views.py:153
+msgid "title.sqlijc.page"
+msgstr "Search Your Secret Number"
+
+#: dsclab/views.py:154
+msgid "msg.note.sqlijc"
+msgstr ""
+"You can see a secret number if you enter <code>Davis</code> and "
+"<code>password</code>. You can see other users information if you enter "
+"password to <code>' OR '1'='1</code>"
+
+#: dsclab/views.py:167
+msgid "title.secondordersqlijc.page"
+msgstr "Register New User"
+
+#: dsclab/views.py:168
+msgid "msg.note.secondordersqlijc"
+msgstr ""
+"If you enter <code>' OR '1'='1</code> for the name, and "
+"enter a password and secret answer to register a user, "
+"the admin user's password and secret question will be displayed"
+
+#: dsclab/views.py:202
+msgid "title.xss.page"
+msgstr "Normal String"
+
+#: dsclab/views.py:203
+msgid "msg.enter.string"
+msgstr "Please enter a string."
+
+#: dsclab/views.py:215
+msgid "title.commandinjection.page"
+msgstr "Text Entry Page"
+
+#: dsclab/views.py:216
+msgid "msg.note.commandinjection"
+msgstr ""
+"Entering <code>;hostname</code> will display the computer name."
+
+#: dsclab/views.py:223
+msgid "msg.echo.command.success"
+msgstr "The echo command was successful."
+
+#: dsclab/views.py:226
+msgid "msg.echo.command.failure"
+msgstr "The echo command failed due to any reason."
+
+#: dsclab/views.py:234
+msgid "title.codeinjection.page"
+msgstr "Performing Basic Numeric Operations"
+
+#: dsclab/views.py:235
+msgid "msg.note.codeinjection"
+msgstr ""
+"If you enter <code>__import__('os')._exit(0)</code> , then this application "
+"is forcibly finished due to code injection."
+
+#: dsclab/views.py:246
+msgid "msg.invalid.expression"
+msgstr "Invalid expression : %(exception)s"
+
+#: dsclab/views.py:258 templates/adminmain.html:8 templates/712_csrf.html:5
+msgid "title.csrf.page"
+msgstr "Change Your Password"
+
+#: dsclab/views.py:259
+msgid "msg.note.csrf"
+msgstr ""
+"This page receives a request that a user does not intend and changes the "
+"user's password."
+
+#: dsclab/views.py:286
+msgid "msg.passwd.change.failed"
+msgstr "Password change failed."
+
+#: dsclab/views.py:293
+msgid "title.pathtraversal.page"
+msgstr "Display File Content"
+
+#: dsclab/views.py:294
+msgid "msg.note.pathtraversal"
+msgstr ""
+"Entering <code>811_path_traversal.html</code> will display this page's HTML. "
+"Entering <code>../dsclab/settings.py</code> might display the Django settings file."
+
+#: dsclab/views.py:316
+msgid "title.xxe.page"
+msgstr "XML Data Import"
+
+#: dsclab/views.py:317
+msgid "msg.note.xxe"
+msgstr ""
+"However, Django's security prevents XXE attacks, resulting in an error."
+
+#: dsclab/views.py:333
+msgid "msg.not.xml.file"
+msgstr "The chosen file is not an XML file."
+
+#: templates/adminmain.html:5
+msgid "msg.admin.page.top"
+msgstr "Well come to admins page!!"
+
+#: templates/adminmain.html:7
+msgid "Django administration"
+msgstr ""
+
+#: templates/login.html:5
+msgid "msg.need.admin.privilege"
+msgstr ""
+"You need admin privileges to go ahead from here."
+
+#: templates/login.html:19
+msgid "label.login"
+msgstr "Login"
+
+#: templates/db_userlist.html:7 templates/login.html:10
+msgid "label.user.id"
+msgstr "User ID"
+
+#: templates/login.html:14 templates/422_sql_injection.html:12
+#: templates/442_second_order_sql_injection.html:14
+msgid "label.password"
+msgstr "Password"
+
+#: templates/db_userlist.html:8 templates/422_sql_injection.html:9
+#: templates/442_second_order_sql_injection.html.html:10
+msgid "label.name"
+msgstr "Name"
+
+#: templates/db_userlist.html:9
+#: templates/442_second_order_sql_injection.html:22
+msgid "label.phone"
+msgstr "Phone"
+
+#: templates/db_userlist.html:10
+#: templates/442_second_order_sql_injection.html:26
+msgid "label.mail"
+msgstr "Mail Address"
+
+#: templates/422_sql_injection.html:16
+#: templates/442_second_order_sql_injection.html:30
+#: templates/532_xss.html:10 templates/612_os_command_injection.html:8
+msgid "label.submit"
+msgstr "Submit"
+
+#: templates/442_second_order_sql_injection.html:6
+msgid "msg.register_user_description"
+msgstr "Enter a name, password, and secret number to register a new user."
+
+#: templates/422_sql_injection.html:7
+msgid "msg.enter.name.and.passwd"
+msgstr "Enter a name and password to display the secret number."
+
+#: templates/422_sql_injection.html:26 templates/442_second_order_sql_injection.html:18
+msgid "label.secret"
+msgstr "Secret"
+
+#: templates/422_sql_injection.html:6
+msgid "msg.description.sqlijc"
+msgstr "When you enter your name and password, your secret number is shown."
+
+#: templates/442_second_order_sql_injection.html:6
+msgid "msg.description.secondordersqlijc"
+msgstr "Enter a name, password, and secret number to register a new user."
+
+#: templates/442_second_order_sql_injection.html:12,16,20
+msgid "placeholder.required"
+msgstr "Required"
+
+#: templates/532_xss.html:7
+msgid "msg.description.xss"
+msgstr "Enter a string and the string will be displayed as is."
+
+#: templates/532_xss.html:8
+msgid "label.string"
+msgstr "String"
+
+#: templates/532_xss.html:16
+msgid "msg.note.xss"
+msgstr ""
+"JavaScript is executed if you enter name to <code>&lt;script&gt;alert("
+"document.cookie);&lt;/script&gt;</code>"
+
+#: templates/612_os_command_injection.html:7
+msgid "msg.enter.echo.command"
+msgstr ""
+"When you enter some text and submit, "
+"the text you entered will be displayed as is by the echo command."
+
+#: templates/642_code_injection.html:7
+msgid "msg.enter.math.expression"
+msgstr ""
+"Please enter a mathematical expression. You can use <code>math</code> in the "
+"expression. For example, <code>math.pow(math.sqrt(16), 2)</code>"
+
+#: templates/642_code_injection.html:13
+msgid "label.calculate"
+msgstr "Calculate"
+
+#: templates/712_csrf.html:6
+msgid "msg.enter.recover.systemerror"
+msgstr ""
+"A system error has occurred. To recover, click the button below "
+
+#: templates/712_csrf.html:10
+msgid "label.goto.admin.page"
+msgstr "Go to Admin Main Page"
+
+#: templates/812_path_traversal.html:6
+msgid "msg.description.pathtraversal"
+msgstr "Please enter an HTML file name:"
+
+#: templates/812_path_traversal.html:9
+msgid "label.show_filename"
+msgstr "Show Filename"
+
+#: templates/822_xxe.html:8
+msgid "label.result"
+msgstr "Result"
+
+#: templates/822_xxe.html:16
+msgid "label.history.back"
+msgstr "Back"
+
+#: templates/822_xxe.html:18
+msgid "msg.update.users.by.xml"
+msgstr ""
+"Upload the following files in the template folder to import an XML file."
+
+#: templates/822_xxe.html:19
+msgid "msg.xml.file.sample.normal"
+msgstr ""
+" - 822_XXE_Sample1_Normal.xml ： Updates the database (Normal)."
+
+#: templates/822_xxe.html:20
+msgid "msg.xml.file.sample.attack"
+msgstr ""
+" - 822_XXE_Sample2_Attack.xml ：Attempts to display the Linux server's password file (/etc/passwd) (XXE attack)."
+
+#: templates/822_xxe.html:24
+msgid "msg.select.upload.file"
+msgstr "Select a file to upload."
+
+#: templates/822_xxe.html:25
+msgid "label.upload"
+msgstr "Upload"
+
+#: templates/header.html:15
+msgid "label.login.user.id"
+msgstr "Login User ID"
+
+#: templates/header.html:16
+msgid "label.logout"
+msgstr "Log out"
+
+#: templates/index.html:18
+msgid "section.vulnerabilities"
+msgstr "Vulnerabilities"
+
+#: templates/index.html:22
+msgid "function.name.sql.injection"
+msgstr "SQL Injection"
+
+#: templates/index.html:23
+msgid "function.description.sql.injection"
+msgstr "There is an SQL injection vulnerability in this page."
+
+#: templates/index.html:26
+msgid "function.name.secondorderijc"
+msgstr "Second Order SQL Injection"
+
+#: templates/index.html:27
+msgid "function.description.secondorderijc"
+msgstr "There is a Second order SQL injection vulnerability in this page."
+
+#: templates/index.html:30
+msgid "function.name.xss"
+msgstr "XSS (Cross Site Scripting)"
+
+#: templates/index.html:31
+msgid "function.description.xss"
+msgstr "There is a cross site scripting vulnerability in this page."
+
+#: templates/index.html:34
+msgid "function.name.os.command.injection"
+msgstr "OS command Injection"
+
+#: templates/index.html:35
+msgid "function.description.os.command.injection"
+msgstr "There is an OS command injection vulnerability in this page."
+
+#: templates/index.html:38
+msgid "function.name.code.injection"
+msgstr "Code Injection"
+
+#: templates/index.html:39
+msgid "function.description.code.injection"
+msgstr "There is a Code injection vulnerability in this page."
+
+#: templates/index.html:42
+msgid "function.name.csrf"
+msgstr "CSRF (Cross-site Request Forgery)"
+
+#: templates/index.html:43
+msgid "function.description.csrf"
+msgstr "There is a CSRF vulnerability in the change password page."
+
+#: templates/index.html:46
+msgid "function.name.pathtraversal"
+msgstr "Path Traversal"
+
+#: templates/index.html:47
+msgid "function.description.pathtraversal"
+msgstr "There is a Path Traversal vulnerability in the display file content page."
+
+#: templates/index.html:50
+msgid "function.name.xxe"
+msgstr "XXE (XML External Entity)"
+
+#: templates/index.html:51
+msgid "function.description.xxe"
+msgstr "There is an XXE vulnerability in this page."
+
+#: templates/index.html:58
+msgid "section.debug"
+msgstr "Debug"
+
+#: templates/index.html:62
+msgid "function.name.database.user.list"
+msgstr "User List Display"
+
+#: templates/index.html:63
+msgid "function.description.database.user.list"
+msgstr ""
+"Displays a list of user information registered in the database."

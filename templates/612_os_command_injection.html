@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% block body %}
+{% include "header.html" %}
+<form action="" method="post">
+    {% csrf_token %}
+    <p>{% trans 'msg.enter.echo.command' %}</p>
+    <input type="text" name="command" size="100" maxlength="100" value="{{command}}"/><br/><br/>
+    {% if result %}
+    <span>{{result}}</span><br/><br/>
+    {% endif %}
+    <input type="submit" value="{% trans 'label.submit' %}"/><br/><br/>
+    {% include "messages.html" %}
+</form>
+{% endblock %}

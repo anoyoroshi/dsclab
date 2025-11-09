@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% block body %}
+{% include "header.html" %}
+
+<form method="GET">
+    <div class="mb-4">
+        <label for="filename">{% trans 'msg.description.pathtraversal' %}</label>
+        <input type="text" id="filename" name="filename">
+    </div>
+    <div class="mb-3">
+        <button type="submit" class="btn btn-light">{% trans 'label.show_filename' %}</button>
+    </div>
+    {% if message %}
+        <b>{{ message }}</b><br />
+    {% endif %}
+    {% if content %}
+        <p>{{ filepath }}:</p>
+        <pre>{{ content }}</pre>
+    {% endif %}
+    {% include "messages.html" %}
+</form>
+{% endblock %}

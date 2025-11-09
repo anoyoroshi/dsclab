@@ -1,0 +1,74 @@
+{% extends "base.html" %}
+{% load i18n static %}
+
+{% block body %}
+<header>
+  <table style="margin-top: 20px; width: 960px;">
+    <tr>
+      <td rowspan="1" colspan="1">
+        <img src="{% static "dsclab_header.png" %}" height="120" class="bounceInRight animated"/>
+      </td>
+    </tr>
+  </table>
+</header>
+<hr/>
+
+<h2>
+  <span class="fa-solid fa-vial-virus"></span>
+  <span>{% trans 'section.vulnerabilities' %}</span>
+</h2>
+<ul>
+  <li>
+    <span class="title"><a href="{% url 'sqlinjection' %}" shape="rect">{% trans 'function.name.sql.injection' %}</a></span>
+    <span class="description">{% trans 'function.description.sql.injection' %}</span>
+  </li>
+  <li>
+    <span class="title"><a href="{% url 'secondordersqlinjection' %}" shape="rect">{% trans 'function.name.secondorderijc' %}</a></span>
+    <span class="description">{% trans 'function.description.secondorderijc' %}</span>
+  </li>
+  <li>
+    <span class="title"><a href="{% url 'xss' %}" shape="rect">{% trans 'function.name.xss' %}</a></span>
+    <span class="description">{% trans 'function.description.xss' %}</span>
+  </li>
+  <li>
+    <span class="title"><a href="{% url 'oscommandinjection' %}" shape="rect">{% trans 'function.name.os.command.injection' %}</a></span>
+    <span class="description">{% trans 'function.description.os.command.injection' %}</span>
+  </li>
+  <li>
+    <span class="title"><a href="{% url 'codeinjection' %}" shape="rect">{% trans 'function.name.code.injection' %}</a></span>
+    <span class="description">{% trans 'function.description.code.injection' %}</span>
+  </li>
+  <li>
+    <span class="title"><a href="{% url 'csrf' %}" shape="rect">{% trans 'function.name.csrf' %}</a></span>
+    <span class="description">{% trans 'function.description.csrf' %}</span>
+  </li>
+  <li>
+    <span class="title"><a href="{% url 'pathtraversal' %}" shape="rect">{% trans 'function.name.pathtraversal' %}</a></span>
+    <span class="description">{% trans 'function.description.pathtraversal' %}</span>
+  </li>
+  <li>
+    <span class="title"><a href="{% url 'xxe' %}" shape="rect">{% trans 'function.name.xxe' %}</a></span>
+    <span class="description">{% trans 'function.description.xxe' %}</span>
+  </li>
+</ul>
+
+{% if not isOnlyVulnerabilities %}
+<h2>
+  <span class="fa-solid fa-vial-virus"></span>
+  <span>{% trans 'section.debug' %}</span>
+</h2>
+<ul>
+  <li>
+    <span class="title"><a href="{% url 'dbuserlist' %}" shape="rect">{% trans 'function.name.database.user.list' %}</a></span>
+    <span class="description">{% trans 'function.description.database.user.list' %}</span>
+  </li>
+</ul>
+{% endif %}
+
+<hr/>
+<footer>
+  <img src="{% static "dsclab_footer.png" %}" height="60"/>Copyright &copy; 2025 MoriShohei<br/>
+  <small>このサイトで使われているロゴは、GoogleのAIモデル「Gemini」によって生成されたものです。</small><br/><br/>
+</footer>
+{% endblock %}
+

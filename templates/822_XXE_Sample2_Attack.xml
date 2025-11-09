@@ -1,0 +1,4 @@
+<!DOCTYPE person [<!ENTITY param SYSTEM "file:///etc/passwd">]>
+<person>
+<id>&param;</id>
+</person>

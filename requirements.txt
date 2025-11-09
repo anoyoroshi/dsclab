@@ -1,0 +1,7 @@
+Django==5.1.2
+ldap3==2.9.1
+numpy==2.1.2
+Pillow==11.0.0
+psutil==6.1.0
+Requests==2.32.3
+validate_email==1.3

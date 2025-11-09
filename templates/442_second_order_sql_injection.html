@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% block body %}
+{% include "header.html" %}
+<div class="row">
+  <div class="col-sm-8">
+    <form action="" method="post">
+      {% csrf_token %}
+      <p>{% trans 'msg.description.secondordersqlijc' %}</p>
+      {% if error_message %}
+      <font color="red"><b>{{ error_message }}</b></font><br />
+      {% endif %}
+      <div class="row mb-3">
+        <label for="name" class="col-sm-2 col-form-label fw-bold">{% trans 'label.name' %}</label>
+        <div class="col-sm-4">
+          <input type="text" class="form-control" name="name" id="name" placeholder="{% trans 'placeholder.required' %}">
+        </div>
+      </div>
+      <div class="row mb-3">
+        <label for="password" class="col-sm-2 col-form-label fw-bold">{% trans 'label.password' %}</label>
+        <div class="col-sm-4">
+          <input type="password" class="form-control" name="password" id="password" placeholder="{% trans 'placeholder.required' %}">
+        </div>
+      </div>
+      <div class="row mb-3">
+        <label for="secret" class="col-sm-2 col-form-label fw-bold">{% trans 'label.secret' %}</label>
+        <div class="col-sm-4">
+          <input type="text" class="form-control" name="secret" id="secret" maxlength="4" placeholder="{% trans 'placeholder.required' %}">
+        </div>
+      </div>
+      <div class="row mb-3">
+        <label for="phone" class="col-sm-2 col-form-label">{% trans 'label.phone' %}</label>
+        <div class="col-sm-4">
+          <input type="text" class="form-control" name="phone" id="phone">
+        </div>
+      </div>
+      <div class="row mb-3">
+        <label for="mail" class="col-sm-2 col-form-label">{% trans 'label.mail' %}</label>
+        <div class="col-sm-4">
+          <input type="email" class="form-control" name="mail" id="mail">
+        </div>
+      </div>
+      <div class="mb-3">
+        <button type="submit" class="btn btn-light">{% trans 'label.submit' %}</button>
+      </div>
+      {% autoescape off %}
+      {% if message %}
+      <b>{{ message }}</b><br />
+      {% endif %}
+      {% endautoescape %}
+      {% include "messages.html" %}
+    </form>
+  </div>
+</div>
+{% endblock %}

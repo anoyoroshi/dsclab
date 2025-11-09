@@ -1,0 +1,22 @@
+{% load i18n %}
+<nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="/">{% trans 'label.top' %}</a></li>
+    <li class="breadcrumb-item active" aria-current="page">{% if breadcrumbs_title %}{{ breadcrumbs_title }}{% else %}{{ title }}{% endif %}</li>
+  </ol>
+</nav>
+<table style="width: 100%;">
+    <tr>
+        <td><h2><span class="fa-solid fa-bomb"></span> <span>{{ title }}</span></h2></td>
+        {% if not request.session.username %}
+        {% endif %}
+        {% if request.session.username %}
+        <td align="right">
+            <p>{% trans 'label.login.user.id' %}: {{ request.session.username }}</p>
+            <a href="/logout">{% trans 'label.logout' %}</a>
+        </td>
+        {% endif %}
+    </tr>
+</table>
+<hr style="margin-top: 0px"/>
+

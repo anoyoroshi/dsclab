@@ -1,0 +1,14 @@
+<people>
+    <person>
+        <id>1</id>
+        <name>Taro</name>
+        <phone>090-1234-5678</phone>
+        <mail>Taro@example.com</mail>
+    </person>
+    <person>
+        <id>2</id>
+        <name>Taka</name>
+        <phone>080-8888-8888</phone>
+        <mail>Taka@example.com</mail>
+    </person>
+</people>
